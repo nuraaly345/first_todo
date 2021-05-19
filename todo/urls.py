@@ -16,6 +16,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from main.views import index, test, check
+from django.conf import settings
+from django.conf.urls.static import static
 
 
 
@@ -24,4 +26,5 @@ urlpatterns = [
     path('', index, name='index'),
     path('test/', test),
     path('check/', check),
-]
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOt)\
+    +static(setting.MEDIA_URL, document_root=settings.STATIC_MEDIA)
