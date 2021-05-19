@@ -26,5 +26,5 @@ urlpatterns = [
     path('', index, name='index'),
     path('test/', test),
     path('check/', check),
-] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOt)\
-    +static(setting.MEDIA_URL, document_root=settings.STATIC_MEDIA)
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)\
+    +static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
