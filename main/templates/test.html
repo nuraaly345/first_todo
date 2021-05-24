@@ -7,6 +7,11 @@
     <title>Document</title>
 </head>
 <body>
-    
+
+
+    {% for todo in todo_list %}
+        <h1>{{ todo.text }} - {{ todo.created_at }}</h1>
+
+    {% endfor %}
 </body>
 </html>
